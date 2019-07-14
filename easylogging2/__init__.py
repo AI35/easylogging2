@@ -1,5 +1,5 @@
 # Created By : Ali B Othman
-# V 2.0.0
+# V 2.0.1
 # Simple logging lib for python
 
 import logging
@@ -18,6 +18,7 @@ class logname:
         self.logger = logging.getLogger(__name__)
         self.FileStart = True
         self.Setup_configuration()
+        self.run()
 
 
 
@@ -71,19 +72,14 @@ class logname:
         logging.basicConfig(level = logging.DEBUG, format=self.formated)
 ###################################################################
     def warning(self, msg):
-        self.run()
         self.logger.warning(self.getname()+' : '+ str(msg))
     def debug(self, msg):
-        self.run()
         self.logger.debug(self.getname()+' : '+ str(msg))
     def info(self, msg, *args, **kwargs):
-        self.run()
         self.logger.info(self.getname()+' : '+ str(msg), *args, **kwargs)
     def critical(self, msg):
-        self.run()
         self.logger.critical(self.getname()+' : '+ str(msg))
     def error(self, msg, exc_info = False):
-        self.run()
         if self.exc == 'True':
             self.logger.error(self.getname()+' : '+ str(msg), exc_info = True)
         elif self.exc == 'False':

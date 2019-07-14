@@ -2,7 +2,7 @@
 ###### Simple and Easy Logging lib for python V2
 
 [![easylogging2](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
-[![version](https://img.shields.io/badge/version-2.0.0-green.svg)]()
+[![version](https://img.shields.io/badge/version-2.0.1-green.svg)]()
 [![status](https://img.shields.io/badge/status-stable-brightgreen.svg)]()
 [![python](https://img.shields.io/badge/python-3-blue.svg)](http://www.python.org/download/)
 [![windows](https://img.shields.io/badge/windows-tested-brightgreen.svg)]()
@@ -75,8 +75,12 @@
   	```
 	  formatter = %(asctime)s - %(name)s - %(levelname)s - %(message)s
 	```
+## Changlog
+### V 2.0.1 Bug fix:
+###### - Increase performance
 
-- Level table :
+
+## - Level table :
 
     | Level  | Numeric value |
     | ------------- | ------------- |
