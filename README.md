@@ -79,8 +79,8 @@
 ### V 2.0.1 Bug fix:
 ###### - Increase performance
 
-
-## - Level table :
+##
+ - Level table :
 
     | Level  | Numeric value |
     | ------------- | ------------- |
