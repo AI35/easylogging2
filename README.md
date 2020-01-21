@@ -15,7 +15,7 @@
 ## Notes
 - After 9 months this library has returned better and more useful.
 - This library is very simple so it is not better than a logging library and it is derived from it.
-- This library is created because I wanted a simple and easy logging library.
+- This library was created because I wanted a simple and easy logging library.
 
 ## Installation
 
@@ -59,7 +59,7 @@
   	  level=50
   	```
   - Change **file_level** number to set level in log file **with** --logfile (50 hide all level).
-  	###### - This option work on --logfile without use --logging (if use --logging file write all level)
+  	###### - This option work on --logfile without use --logging (if you use --logging ,The file will write all levels)
   	```
    	  file_level=0
   	```
