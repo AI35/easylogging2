@@ -1,22 +1,23 @@
-# Created By : Ali B Othman
-# V 2.0.1
-# Simple logging lib for python
-
 import logging
 import sys, os
 from configparser import ConfigParser
 from time import strftime, gmtime
 
+__author__  = "Ali B Othman"
+__version__ = "2.0.5"
+__date__ = "22 January 2020"
+__about__ = "Simpel logging library for python3"
+
 class logname:
     def __init__(self, name=__file__, formatt = None):
-        self.name = name
-        self.formatt = formatt
-        self.lname = name.split("\\")[-1]
-        self.Dir = os.path.join(os.path.dirname(os.path.abspath(self.name)), 'logs')
-        self.logFile = 'Log %s.log' % (strftime("%Y-%m-%d %Hh-%Mm-%Ss", gmtime()))
-        self.Dirfilelog = os.path.join(self.Dir, self.logFile)
-        self.logger = logging.getLogger(__name__)
-        self.FileStart = True
+        self.__name = name
+        self.__formatt = formatt
+        self.__lname = name.split("\\")[-1]
+        self.__Dir = os.path.join(os.path.dirname(os.path.abspath(self.__name)), 'logs')
+        self.__logFile = 'Log %s.log' % (strftime("%Y-%m-%d %Hh-%Mm-%Ss", gmtime()))
+        self.__Dirfilelog = os.path.join(self.__Dir, self.__logFile)
+        self.__logger = logging.getLogger(__name__)
+        self.__FileStart = True
         self.Setup_configuration()
         self.run()
 
@@ -72,44 +73,44 @@ class logname:
         logging.basicConfig(level = logging.DEBUG, format=self.formated)
 ###################################################################
     def warning(self, msg):
-        self.logger.warning(self.getname()+' : '+ str(msg))
+        self.__logger.warning(self.getname()+' : '+ str(msg))
     def debug(self, msg):
-        self.logger.debug(self.getname()+' : '+ str(msg))
+        self.__logger.debug(self.getname()+' : '+ str(msg))
     def info(self, msg, *args, **kwargs):
-        self.logger.info(self.getname()+' : '+ str(msg), *args, **kwargs)
+        self.__logger.info(self.getname()+' : '+ str(msg), *args, **kwargs)
     def critical(self, msg):
-        self.logger.critical(self.getname()+' : '+ str(msg))
+        self.__logger.critical(self.getname()+' : '+ str(msg))
     def error(self, msg, exc_info = False):
         if self.exc == 'True':
-            self.logger.error(self.getname()+' : '+ str(msg), exc_info = True)
+            self.__logger.error(self.getname()+' : '+ str(msg), exc_info = True)
         elif self.exc == 'False':
-            self.logger.error(self.getname()+' : '+ str(msg), exc_info = False)
+            self.__logger.error(self.getname()+' : '+ str(msg), exc_info = False)
         else:
-            self.logger.error(self.getname()+' : '+ str(msg), exc_info = exc_info)
+            self.__logger.error(self.getname()+' : '+ str(msg), exc_info = exc_info)
 
 
 ###################################################################
     def getname(self):
-        return self.lname
+        return self.__lname
 ###################################################################
     def run(self):
         logging.disable(self.level)
         if self.level < 50:
-            self.logger.propagate = True
+            self.__logger.propagate = True
         else:
-            self.logger.propagate = False
+            self.__logger.propagate = False
 
         try:
             if '--logfile' in sys.argv:
                 if not os.path.exists('logs'):
                     os.makedirs('logs')
-                handler = logging.FileHandler(self.Dirfilelog)
+                handler = logging.FileHandler(self.__Dirfilelog)
                 handler.setLevel(logging.DEBUG)
                 formatter = logging.Formatter(self.formated)
                 handler.setFormatter(formatter)
-                if self.FileStart:
-                    self.logger.addHandler(handler)
-                    self.FileStart = False
+                if self.__FileStart:
+                    self.__logger.addHandler(handler)
+                    self.__FileStart = False
                 logging.disable(self.prop)
 
 
@@ -119,7 +120,7 @@ class logname:
         try:
             if '--logging' in sys.argv:
                 logging.disable(0)
-                self.logger.propagate = True
+                self.__logger.propagate = True
         except:
             print('Error...')
 
