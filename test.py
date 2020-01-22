@@ -1,8 +1,9 @@
-# Created By : Ali B Othman
-# Test V 2.0.1
-# Simple Test File
-
 from easylogging2 import logname
+
+__author__  = "Ali B Othman"
+__version__ = "2.0.5"
+__date__ = "22 January 2020"
+__about__ = "Simple test file for easylogging"
 
 ########## very important ############
 l = logname(__file__)
