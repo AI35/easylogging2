@@ -6,7 +6,7 @@ from time import strftime, gmtime
 __author__  = "Ali B Othman"
 __version__ = "2.0.5"
 __date__ = "22 January 2020"
-__about__ = "Simpel logging library for python3"
+__about__ = "Simple logging library for python3"
 
 class logname:
     def __init__(self, name=__file__, formatt = None):
