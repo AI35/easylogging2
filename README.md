@@ -1,5 +1,5 @@
 # easylogging2
-###### Simple and Easy Logging lib for python V2
+###### Simple and Easy Logging lib for python3
 
 [![easylogging2](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 [![version](https://img.shields.io/badge/version-2.0.5-green.svg)]()
