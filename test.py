@@ -1,8 +1,8 @@
 from easylogging2 import logname
 
 __author__  = "Ali B Othman"
-__version__ = "2.0.5"
-__date__ = "22 January 2020"
+__version__ = "2.1.1"
+__date__ = "30 March 2022"
 __about__ = "Simple test file for easylogging"
 
 ########## very important ############
@@ -32,3 +32,21 @@ try:
 	Test_Error
 except Exception :
 	l.error('**Error : exc_info = False**', exc_info = False)
+
+print('########### TEST Decorators ###########')
+
+@l.func_set(30)
+def test_func(x, y):
+	print(x + y + 5)
+	l.debug('debug in test_func')
+	l.info('info in test_func')
+	l.warning('Warning in test_func')
+	l.critical('Stopped in test_func!!')
+	print(x + y)
+
+test_func(1,2)
+
+print('########### TEST CRITICAL 2 ###########')
+l.critical('Stopped !!')
+print('########### TEST WARNING ###########')
+l.warning('Warning')

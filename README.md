@@ -2,7 +2,7 @@
 ###### Simple and Easy Logging lib for python3
 
 [![easylogging2](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
-[![version](https://img.shields.io/badge/version-2.0.5-green.svg)]()
+[![version](https://img.shields.io/badge/version-2.1.1-green.svg)]()
 [![status](https://img.shields.io/badge/status-stable-brightgreen.svg)]()
 [![python](https://img.shields.io/badge/python-3-blue.svg)](http://www.python.org/download/)
 [![windows](https://img.shields.io/badge/windows-tested-brightgreen.svg)]()
@@ -54,12 +54,12 @@
       --logfile            Create log file
   ```
 - After first run you will see new file **logging.conf** :
-  - Change **level** number to display log in console **without** --logging (0 display all level).
+  - Change **level** number to display log in console (0 display all level).
   	```
-  	  level=50
+  	  level=60
   	```
-  - Change **file_level** number to set level in log file **with** --logfile (50 hide all level).
-  	###### - This option work on --logfile without use --logging (if you use --logging ,The file will write all levels)
+  - Change **file_level** number to set level in log file **with** --logfile (60 hide all level).
+  	###### - This option work on --logfile
   	```
    	  file_level=0
   	```
@@ -119,6 +119,13 @@
                         the record is emitted
 	```
 ## Changlog
+### V 2.1.1
+###### - Add Decorator @func_set(level).
+	```
+	  Use @Yourlog.func_set(level) to set logger and handler level to function and ignore all level config in function.
+	```
+##### - Fix Bug handler write all level and ignore file_level when using --logging with --logfile
+
 ### V 2.0.5 Some fixes:
 ###### - Make some variables private.
 
@@ -130,11 +137,11 @@
 
     | Level  | Numeric value |
     | ------------- | ------------- |
-    | CRITICAL  | < 50  |
-    | ERROR  | < 40  |
-    | WARNING  | < 30  |
-    | INFO  | < 20  |
-    | DEBUG  | < 10  |
+    | CRITICAL  |  50  |
+    | ERROR  |  40  |
+    | WARNING  |  30  |
+    | INFO  |  20  |
+    | DEBUG  |  10  |
     | NOTSET  | 0  |
    
 
@@ -142,7 +149,7 @@
   
 ## LICENSE
 ```
-Copyright 2019 LinePY - ALI B OTHMAN(AI35), Inc.
+Copyright 2019 ALI B OTHMAN(AI35), Inc.
 
 easylogging2
 
