@@ -121,9 +121,9 @@
 ## Changlog
 ### V 2.1.1
 ###### - Add Decorator @func_set(level).
-	```
+	
 	  Use @Yourlog.func_set(level) to set logger and handler level to function and ignore all level config in function.
-	```
+	
 ##### - Fix Bug handler write all level and ignore file_level when using --logging with --logfile
 
 ### V 2.0.5 Some fixes:
