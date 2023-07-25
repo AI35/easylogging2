@@ -3,7 +3,7 @@
 
 [![easylogging2](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 [![version](https://img.shields.io/badge/version-2.1.1-green.svg)]()
-[![status](https://img.shields.io/badge/status-stable-brightgreen.svg)]()
+[![status](https://img.shields.io/badge/status-unstable-green.svg)]()
 [![python](https://img.shields.io/badge/python-3-blue.svg)](http://www.python.org/download/)
 [![windows](https://img.shields.io/badge/windows-tested-brightgreen.svg)]()
 [![linux](https://img.shields.io/badge/linux-tested-brightgreen.svg)]()
